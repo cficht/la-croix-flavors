@@ -1,5 +1,6 @@
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
+    flavorLi.className = 'flavor-box';
 
     const flavorName = document.createElement('h3');
     flavorName.textContent = theFlavor.name;

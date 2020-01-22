@@ -1,3 +1,20 @@
 body {
-    background-color:yellow;
+    background-color:#ffb703;
+    
+    /* color: #0218a2;
+    color: #ffb703;
+    color: #f76f73;
+    color: #027fdc; */
+    color: #07c4c5;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* padding: 10px; */
+    background-color:#f76f73;
+    color: #07c4c5;
+    margin: 0px;
+    width: 100%;
 }

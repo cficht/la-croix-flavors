@@ -9,3 +9,4 @@ for (let i = 0; i < flavors.length; i++) {
     drinkList.appendChild(renderedFlavor);
 }
 
+
