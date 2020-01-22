@@ -3,13 +3,7 @@
 }
 
 body {
-    background-color:#ffb703;
-    
-    color: #0218a2;
-    color: #ffb703;
-    color: #f76f73;
-    color: #027fdc;
-    color: #07c4c5;
+    background-color: #ffb703;
 }
 
 header {
@@ -17,15 +11,14 @@ header {
     top: 0px;
     left: 0px;
     background-color:#f76f73;
-    color: #07c4c5;
-    margin: 0px;
-    width: 100%;
     border-width: 0px 0px 5px 0px;
     border-color: #0218a2;
     border-style: solid;
     text-align: right;
     font-family: 'Red Hat Display', sans-serif;
     padding-right: 40px;
+    margin: 0px;
+    width: 100%;
 }
 
 header img {
@@ -39,12 +32,9 @@ header h1 {
     line-height: 1.5;
 }
 
-h1 {
+h1, h3 {
     font-family: 'Red Hat Display', sans-serif;
-}
-
-h3 {
-    font-family: 'Red Hat Display', sans-serif;
+    color: #07c4c5;
 }
 
 #main-content {

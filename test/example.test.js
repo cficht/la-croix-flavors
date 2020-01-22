@@ -1,11 +1,9 @@
-// IMPORT MODULES under test here:
 import renderDrink from '../products/render-drink.js';
 import flavors from '../data/flavors.js';
 
 const test = QUnit.test;
 
 test('check static design against product list and render function', function(assert) {
-
     const inputPure = flavors[4];
     const outputPure = (renderDrink(inputPure)).outerHTML;
     
