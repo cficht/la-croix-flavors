@@ -1,7 +1,4 @@
-import flavors from '../data/flavors.js';
-
-const drinkList = document.getElementById('drink-list');
-
+//import flavors from '../data/flavors.js';
 
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
@@ -26,12 +23,8 @@ function renderDrink(theFlavor) {
     flavorButton.textContent = 'Add';
     flavorLi.appendChild(flavorButton);
 
-    drinkList.appendChild(flavorLi);
+    return flavorLi;
 }
-
-//console.log(flavors[0]);
-
-//renderDrink(flavors[0]);
 
 export default renderDrink;
 
