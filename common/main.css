@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color:#ffb703;
     
-    /* color: #0218a2;
+    color: #0218a2;
     color: #ffb703;
     color: #f76f73;
-    color: #027fdc; */
+    color: #027fdc;
     color: #07c4c5;
 }
 
@@ -12,9 +16,46 @@ header {
     position: absolute;
     top: 0px;
     left: 0px;
-    /* padding: 10px; */
     background-color:#f76f73;
     color: #07c4c5;
     margin: 0px;
     width: 100%;
+    border-width: 0px 0px 5px 0px;
+    border-color: #0218a2;
+    border-style: solid;
+    text-align: right;
+    font-family: 'Red Hat Display', sans-serif;
+    padding-right: 40px;
+}
+
+header img {
+    height: 50px;
+    margin: 20px;
+    float: left;
+    clear: left;
+}
+
+header h1 {
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h3 {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+#main-content {
+    border: 5px solid #0218a2;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #027fdc;
+}
+
+#main-page-div {
+    margin-top: 200px;
+    text-align: center;
 }
