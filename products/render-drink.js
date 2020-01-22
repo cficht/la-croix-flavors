@@ -1,5 +1,3 @@
-//import flavors from '../data/flavors.js';
-
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
 
