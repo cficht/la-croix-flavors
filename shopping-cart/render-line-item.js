@@ -13,11 +13,10 @@ function renderLineItem(cartToInventory, selectedProduct) {
     productRow.appendChild(productQuantityTD); 
 
     const productPriceTD = document.createElement('td');
-    const productPriceAdjusted = cartToInventory.price;
-    productPriceTD.textContent = `$${productPriceAdjusted.toFixed(2)}`;
+    productPriceTD.textContent = `$${cartToInventory.price.toFixed(2)}`;
     productRow.appendChild(productPriceTD); 
 
-    const quantityPrice = calcLineItem(selectedProduct.quantity, productPriceAdjusted);
+    const quantityPrice = calcLineItem(selectedProduct.quantity, cartToInventory.price);
 
     const productTotalTD = document.createElement('td');
     productTotalTD.textContent = `$${quantityPrice.toFixed(2)}`;
