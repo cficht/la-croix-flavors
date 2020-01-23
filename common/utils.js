@@ -6,3 +6,9 @@ export function findById(inputId, inputArray) {
         }
     }
 }
+
+export function calcLineItem(quantity, itemPrice) {
+    const calculateItems = quantity * itemPrice;
+    const roundCalculation = Math.round(calculateItems * 100) / 100;
+    return roundCalculation;
+}

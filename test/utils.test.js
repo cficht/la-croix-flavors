@@ -1,5 +1,6 @@
-import { findById } from '../common/utils.js';
+import { findById, calcLineItem } from '../common/utils.js';
 import flavors from '../data/flavors.js';
+import selectedProducts from '../data/cart.js';
 
 const test = QUnit.test;
 
@@ -25,3 +26,20 @@ test('check if findById function returns null', function(assert) {
 });
 
 
+test('take quantity of 2 and the price of pure and return the total', function(assert) {
+    const inputPrice = flavors[4].price;
+    const testCalc = calcLineItem(2, inputPrice);
+
+    const expectedTotal = 1.38;
+
+    assert.equal(testCalc, expectedTotal);
+});
+
+test('take quantity of 5 and the price of pamplemousse and return the total', function(assert) {
+    const inputPrice = flavors[2].price;
+    const testCalc = calcLineItem(5, inputPrice);
+
+    const expectedTotal = 10.00;
+
+    assert.equal(testCalc, expectedTotal);
+});
