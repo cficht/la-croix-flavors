@@ -1,4 +1,4 @@
-import { findById, calcLineItem } from '../common/utils.js';
+import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
 import flavors from '../data/flavors.js';
 import selectedProducts from '../data/cart.js';
 
@@ -42,4 +42,12 @@ test('take quantity of 5 and the price of pamplemousse and return the total', fu
     const expectedTotal = 10.00;
 
     assert.equal(testCalc, expectedTotal);
+});
+
+test('take quantity and items from the cart and return the order total', function(assert) {
+    const testOrderTotal = calcOrderItem(selectedProducts, flavors);
+
+    const expectedOrderTotal = 35.30;
+
+    assert.equal(testOrderTotal, expectedOrderTotal);
 });
