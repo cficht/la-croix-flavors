@@ -21,24 +21,30 @@
     <main id="main-content">
         <article>
             <table id="shopping-table">
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>Pure</td>
-                    <td>2</td>
-                    <td>$0.69</td>
-                    <td>$1.38</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Order:</td>
-                    <td>$1.38</td>
-                </tr>
+                <thead>
+                    <tr id="shopping-table-header">
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="shopping-table-body">
+                    <!-- <tr class="product-row">
+                        <td>Pure</td>
+                        <td>2</td>
+                        <td>$0.69</td>
+                        <td>$1.38</td>
+                    </tr> -->
+                </tbody>
+                <!-- <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Order:</td>
+                        <td>$1.38</td>
+                    </tr>
+                </tfoot> -->
             </table>
         </article>
         <article>
@@ -46,7 +52,7 @@
         </article>
     </main>
 
-    <!-- <script type="module" src="./products.js"></script> -->
+    <script type="module" src="./shopping-cart.js"></script>
 
 </body>
 
