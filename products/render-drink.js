@@ -1,5 +1,6 @@
-import { findById } from '../common/utils.js';
-//import flavors from '../data/flavors.js';
+import { getCart, addToCart, valueOnLoad } from '../common/cart-api.js';
+
+let browserCart = getCart();
 
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
@@ -25,40 +26,32 @@ function renderDrink(theFlavor) {
     flavorButton.textContent = 'Add';
     flavorLi.appendChild(flavorButton);
 
+    let flavorQuantity = document.createElement('select');
+    flavorQuantity.name = `${theFlavor.id}-quantity`;
+    flavorLi.appendChild(flavorQuantity);
+
+    const initialFlavorValue = valueOnLoad(theFlavor, browserCart);
+    let currentFlavorValue = document.createElement('p');
+    currentFlavorValue.textContent = initialFlavorValue;
+    flavorLi.appendChild(currentFlavorValue);
+
+    for (let i = 0; i < 5; i++) {
+        const quantityOption = document.createElement('option');
+        quantityOption.value = i + 1;
+        quantityOption.textContent = i + 1;
+        flavorQuantity.appendChild(quantityOption);
+    }
+
     flavorButton.addEventListener('click', () => {
-
-        const jsonCart = localStorage.getItem('cart');
-        let browserCart;
-
-        if (jsonCart) {
-            browserCart = JSON.parse(jsonCart);
-        } else {
-            browserCart = [];
-        }
-
-        const matchCheck = findById(theFlavor.id, browserCart);
-
-        if (!matchCheck) {
-            let matchCheck = {
-                id: theFlavor.id,
-                quantity: 1
-            };
-            browserCart.push(matchCheck);
-        } else {
-            matchCheck.quantity++;
-        }
-
-        const jsonLineItem = JSON.stringify(browserCart);
-        localStorage.setItem('cart', jsonLineItem);
-
+        const selectedValue = flavorQuantity.value;
+        const flavorUpdate = addToCart(theFlavor, browserCart, selectedValue);
+        currentFlavorValue.textContent = flavorUpdate;
     });
 
     return flavorLi;
 }
 
 export default renderDrink;
-
-
 
 
 

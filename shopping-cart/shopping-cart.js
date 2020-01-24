@@ -1,18 +1,16 @@
 import flavors from '../data/flavors.js';
-import selectedProducts from '../data/cart.js';
 import { findById, calcOrderItem } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
+import { getCart, clearCart } from '../common/cart-api.js';
 
 const shoppingTable = document.getElementById('shopping-table-body');
 const shoppingTableTotal = document.getElementById('shopping-table-total');
+const orderButton = document.getElementById('order-button');
 
-const jsonCart = JSON.parse(localStorage.getItem('cart'));
-let storedCart;
+let storedCart = getCart();
 
-if (jsonCart) {
-    storedCart = jsonCart;
-} else {
-    storedCart = [];
+if (storedCart.length === 0) {
+    orderButton.disabled = true;
 }
 
 // run through all items in cart
@@ -30,3 +28,10 @@ for (let i = 0; i < storedCart.length; i++) {
     const renderItemTotal = calcOrderItem(storedCart, flavors);
     shoppingTableTotal.textContent = `$${renderItemTotal.toFixed(2)}`;
 }
+
+orderButton.addEventListener('click', () => {
+    const stringCart = JSON.stringify(storedCart, true, 2);
+    alert(stringCart);
+    clearCart();
+    window.location.replace('../');
+});
