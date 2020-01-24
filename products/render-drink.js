@@ -1,5 +1,5 @@
 import { findById } from '../common/utils.js';
-import flavors from '../data/flavors.js';
+//import flavors from '../data/flavors.js';
 
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
@@ -50,7 +50,7 @@ function renderDrink(theFlavor) {
 
         const jsonLineItem = JSON.stringify(browserCart);
         localStorage.setItem('cart', jsonLineItem);
-        
+
     });
 
     return flavorLi;
