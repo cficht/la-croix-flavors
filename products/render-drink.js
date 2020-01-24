@@ -1,3 +1,6 @@
+import { findById } from '../common/utils.js';
+import flavors from '../data/flavors.js';
+
 function renderDrink(theFlavor) {
     const flavorLi = document.createElement('li');
     flavorLi.className = 'flavor-box';
@@ -21,6 +24,34 @@ function renderDrink(theFlavor) {
     flavorButton.value = theFlavor.id;
     flavorButton.textContent = 'Add';
     flavorLi.appendChild(flavorButton);
+
+    flavorButton.addEventListener('click', () => {
+
+        const jsonCart = localStorage.getItem('cart');
+        let browserCart;
+
+        if (jsonCart) {
+            browserCart = JSON.parse(jsonCart);
+        } else {
+            browserCart = [];
+        }
+
+        const matchCheck = findById(theFlavor.id, browserCart);
+
+        if (!matchCheck) {
+            let matchCheck = {
+                id: theFlavor.id,
+                quantity: 1
+            };
+            browserCart.push(matchCheck);
+        } else {
+            matchCheck.quantity++;
+        }
+
+        const jsonLineItem = JSON.stringify(browserCart);
+        localStorage.setItem('cart', jsonLineItem);
+        
+    });
 
     return flavorLi;
 }
