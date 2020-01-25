@@ -1,7 +1,7 @@
 const coconut = {
     id: 'coconut',
     name: 'Coconut',
-    image: 'coconut.png',
+    image: '../assets/coconut.png',
     description: 'Ew. Gross.',
     category: 'drink',
     price: 0.42
@@ -10,7 +10,7 @@ const coconut = {
 const lemon = {
     id: 'lemon',
     name: 'Lemon',
-    image: 'lemon.png',
+    image: '../assets/lemon.png',
     description: 'Sour.',
     category: 'drink',
     price: 0.50
@@ -19,7 +19,7 @@ const lemon = {
 const pamplemousse = {
     id: 'pamplemousse',
     name: 'Pamplemousse',
-    image: 'pamplemousse.png',
+    image: '../assets/pamplemousse.png',
     description: 'The second best flavor.',
     category: 'drink',
     price: 2.00
@@ -28,7 +28,7 @@ const pamplemousse = {
 const passionfruit = {
     id: 'passionfruit',
     name: 'Passionfruit',
-    image: 'passionfruit.png',
+    image: '../assets/passionfruit.png',
     description: 'Pretty solid flavor.',
     category: 'drink',
     price: 1.00
@@ -37,7 +37,7 @@ const passionfruit = {
 const pure = {
     id: 'pure',
     name: 'Pure',
-    image: 'pure.png',
+    image: '../assets/pure.png',
     description: 'As bland as it gets.',
     category: 'drink',
     price: 0.69
@@ -46,7 +46,7 @@ const pure = {
 const raspberry = {
     id: 'raspberry',
     name: 'Raspberry',
-    image: 'raspberry.png',
+    image: '../assets/raspberry.png',
     description: 'The best. The best. The best.',
     category: 'drink',
     price: 5.50
@@ -55,7 +55,7 @@ const raspberry = {
 const tangerine = {
     id: 'tangerine',
     name: 'Tangerine',
-    image: 'tangerine.png',
+    image: '../assets/tangerine.png',
     description: 'A tasty orange flavor.',
     category: 'drink',
     price: 1.20

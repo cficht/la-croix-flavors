@@ -11,7 +11,7 @@ function renderDrink(theFlavor) {
     flavorLi.appendChild(flavorName);
 
     const flavorImg = document.createElement('img');
-    flavorImg.src = `../assets/${theFlavor.image}`;
+    flavorImg.src = `${theFlavor.image}`;
     flavorImg.alt = theFlavor.description;
     flavorImg.height = '100';
     flavorImg.width = '50';
