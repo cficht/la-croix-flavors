@@ -49,3 +49,15 @@ export function addProduct(newProductObject) {
     const renderedFlavor = renderDrink(newProductObject);
     return renderedFlavor;
 }
+
+export function removeProduct() {
+    let jsonFlavorListGET = flavorGet();
+    const removeButtons = document.getElementsByClassName('remove-button');
+    for (let i = 0; i < removeButtons.length; i++) {
+        removeButtons[i].addEventListener('click', () => {
+            jsonFlavorListGET.splice(i, 1);
+            flavorSet(jsonFlavorListGET);
+            location.reload();
+        });
+    }
+}

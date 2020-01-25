@@ -50,3 +50,16 @@ h1, h3 {
     /* margin-top: 200px; */
     text-align: center;
 }
+
+nav {
+    position: relative;
+    left: 20px;
+    margin-top: 25px;
+    text-align: right;
+}
+
+.page-links {
+    font-size: 29px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #07c4c5;
+}
