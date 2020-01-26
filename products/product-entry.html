@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../common/main.css">
     <link rel="stylesheet" href="products.css">
-    <title>La Croix: Products</title>
+    <title>La Croix: Product Entry</title>
 </head>
 
 <body>
@@ -24,16 +24,31 @@
     </header>
 
     <main id="main-content">
+        <article id="product-entry-div">
+            <form id="product-entry-form">
+                <label>Name: </label><input type="text" name="name">
+                <label>Id: </label><input type="text" name="id">
+                <label>Image: </label><input type="text" name="image">
+                <label>Description: </label><input type="text" name="description">
+                <label>Category: </label><input type="text" name="category">
+                <label>Price: </label><input type="number" name="price">
+                <br>
+                <button id="product-add-button">Submit</button>
+            </form>
+        </article>
+        
         <article>
             <ul id="drink-list">
             </ul>
         </article>
+
         <article id="products-div">
-            <button id="proceed-button" class="big-buttons">Proceed</button>
+            <button id="reset-button" class="big-buttons">Reset Products</button>
         </article>
+
     </main>
 
-    <script type="module" src="./products.js"></script>
+    <script type="module" src="./product-entry.js"></script>
 
 </body>
 

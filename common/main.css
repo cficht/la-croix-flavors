@@ -40,12 +40,27 @@ h1, h3 {
 #main-content {
     border: 5px solid #0218a2;
     width: 1000px;
-    height: 1000px;
+    height: 100%;
     margin: 0 auto;
     background-color: #027fdc;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    
 }
 
 #main-page-div {
-    margin-top: 200px;
     text-align: center;
+}
+
+nav {
+    position: relative;
+    left: 20px;
+    margin-top: 25px;
+    text-align: right;
+}
+
+.page-links {
+    font-size: 29px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #07c4c5;
 }

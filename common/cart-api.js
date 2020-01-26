@@ -13,7 +13,7 @@ export function getCart() {
 }
 
 export function clearCart() {
-    localStorage.clear();
+    localStorage.removeItem('cart');
 }
 
 export function addToCart(theFlavor, browserCart, selectedValue) {

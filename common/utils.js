@@ -22,3 +22,13 @@ export function calcOrderItem(cartArray, productArray) {
     }
     return (Math.round(itemTotal * 100) / 100);
 }
+
+export function checkForm(form) {
+    const inputs = form.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === ''){         
+            return false;
+        }
+    }
+    return true;
+}
