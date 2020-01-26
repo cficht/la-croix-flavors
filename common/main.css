@@ -2,8 +2,13 @@
     box-sizing: border-box;
 }
 
+html {
+    /* height: 100% */
+}
+
 body {
     background-color: #ffb703;
+    /* height: 100% */
 }
 
 header {
@@ -40,14 +45,15 @@ h1, h3 {
 #main-content {
     border: 5px solid #0218a2;
     width: 1000px;
-    height: 1000px;
+    height: 100%;
     margin: 0 auto;
     background-color: #027fdc;
     padding-top: 100px;
+    padding-bottom: 50px;
+    
 }
 
 #main-page-div {
-    /* margin-top: 200px; */
     text-align: center;
 }
 

@@ -1,4 +1,4 @@
-import { flavorGet, flavorSet } from '../common/utils.js';
+import { flavorGet, flavorSet } from '../common/product-api.js';
 import renderDrink from './render-drink.js';
 
 let jsonFlavorListGET = flavorGet();

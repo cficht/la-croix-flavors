@@ -1,6 +1,6 @@
-import { flavorGet, flavorSet } from '../common/utils.js';
 import { findById, calcOrderItem } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
+import { flavorGet, flavorSet } from '../common/product-api.js';
 import { getCart, clearCart } from '../common/cart-api.js';
 
 const shoppingTable = document.getElementById('shopping-table-body');
