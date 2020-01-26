@@ -37,3 +37,12 @@ export function removeProduct() {
         });
     }
 }
+
+// adds remove buttons for the product entry page
+export function addRemoveButton(flavor, renderedFlavor) {
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'remove';
+    removeButton.name = flavor.id;
+    removeButton.className = 'remove-button';
+    renderedFlavor.appendChild(removeButton);
+}

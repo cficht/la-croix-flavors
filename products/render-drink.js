@@ -22,6 +22,7 @@ function renderDrink(theFlavor) {
     flavorCost.textContent = `Cost: $${theFlavor.price.toFixed(2)}`;
     flavorLi.appendChild(flavorCost);
 
+    // if there is no add product button from the product entry page, create elements to add to shopping-cart
     if (!productAddButton) {
         const flavorButton = document.createElement('button');
         flavorButton.classList.add('add-button');
@@ -55,5 +56,3 @@ function renderDrink(theFlavor) {
 }
 
 export default renderDrink;
-
-

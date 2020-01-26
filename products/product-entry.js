@@ -1,5 +1,6 @@
-import { flavorGet, flavorSet, flavorReset, addProduct, removeProduct } from '../common/product-api.js';
+import { flavorGet, flavorSet, flavorReset, addProduct, removeProduct, addRemoveButton } from '../common/product-api.js';
 import { clearCart } from '../common/cart-api.js';
+import { checkForm } from '../common/utils.js';
 import renderDrink from './render-drink.js';
 
 const drinkList = document.getElementById('drink-list');
@@ -10,15 +11,16 @@ let jsonFlavorListGET = flavorGet();
 flavorSet(jsonFlavorListGET);
 clearCart();
 
-for (let i = 0; i < jsonFlavorListGET.length; i++) {
-    const flavor = jsonFlavorListGET[i];
+jsonFlavorListGET.forEach(flavor => {
     const renderedFlavor = renderDrink(flavor);
     addRemoveButton(flavor, renderedFlavor);
     drinkList.appendChild(renderedFlavor);
-}
+});
 
+// adds event listener to the remove product buttons on load
 removeProduct();
 
+// add new product if the form is filled out correctly
 productAddButton.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -45,30 +47,13 @@ productAddButton.addEventListener('click', (e) => {
     const processedProduct = addProduct(newProductObject);
     addRemoveButton(newProductObject, processedProduct);
     drinkList.appendChild(processedProduct); 
+
+    // adds event listener to the new product's remove buttons
     removeProduct();
 });
 
+// restore the products to the original list
 productResetButton.addEventListener('click', () => {
     flavorReset();
     location.reload();
 });
-
-
-
-function addRemoveButton(flavor, renderedFlavor) {
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'remove';
-    removeButton.name = flavor.id;
-    removeButton.className = 'remove-button';
-    renderedFlavor.appendChild(removeButton);
-}
-
-function checkForm(form) {
-    const inputs = form.getElementsByTagName('input');
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === ''){         
-            return false;
-        }
-    }
-    return true;
-}

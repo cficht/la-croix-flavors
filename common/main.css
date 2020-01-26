@@ -2,13 +2,8 @@
     box-sizing: border-box;
 }
 
-html {
-    /* height: 100% */
-}
-
 body {
     background-color: #ffb703;
-    /* height: 100% */
 }
 
 header {

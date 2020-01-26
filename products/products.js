@@ -13,8 +13,6 @@ for (let i = 0; i < jsonFlavorListGET.length; i++) {
     drinkList.appendChild(renderedFlavor);
 }
 
-
 proceedButton.addEventListener('click', () => {
     window.location.replace('../shopping-cart');
 });
-
